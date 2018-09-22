@@ -1,0 +1,54 @@
+.dropdown_sect {
+	height: 100vh;
+    padding: .5rem;
+}
+.drop_field {
+	border: 1px solid #ddd;
+    border-radius: 6px;
+    display: inline-block;
+    cursor: pointer;
+    padding: .5rem 1rem .5rem .5rem;
+}
+.tx_ellipsis {
+	width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.drop_down_container {
+	position: fixed;
+    left: 0px;
+    top: 0px;
+}
+.drop_down_list {
+	background: white;
+    display: inline-block;
+    border: 1px solid #ddd;
+    padding: 6px;
+    width: 168px;
+    /*top and left value are static - have to create a dynamic value depends on placing select field*/
+    top: 45px;
+    left: 10px;
+    margin:0px;
+    position: absolute;
+    box-shadow: 1px 1px 3px 1px #ddd;
+}
+
+ul li {
+	list-style: none;
+	padding:3px 2px;
+	cursor: pointer;
+}
+
+li.ddActive {
+	background: #e8e8f1;
+    border: 1px solid #000;
+}
+input, input:focus {
+	height: 17px;
+    width: 150px;
+    padding: 3px;
+    margin: 3px;
+    outline: none;
+}

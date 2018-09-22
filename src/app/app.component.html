@@ -1,0 +1,16 @@
+<section class="dropdown_sect" (click)="isShowList = false;filteredDropDownList=dropDownList;searchTx='';">
+    <div (click)="$event.stopPropagation()">
+        <div>
+            <div class="drop_field tx_ellipsis" (click)="
+            isShowList ? isShowList = false:isShowList = true;filteredDropDownList=dropDownList;searchTx='';">{{dropDownField.name}}</div>
+        </div>
+        <div class="drop_down_container" *ngIf="isShowList">
+           <ul class="drop_down_list">
+            <li><input type="text" name="search" placeholder="Search" #search="ngModel" [(ngModel)]="searchTx" (keyup)="onFilterList()"></li>
+                <li class="tx_ellipsis" *ngFor="let dropdown of filteredDropDownList;let i = index" [ngClass]="[dropdown.id == dropDownField.id? 'ddActive':'']" (click)="dropDownField = dropdown;isShowList = false;filteredDropDownList=dropDownList;searchTx=''">
+                {{dropdown.name}}
+                </li>
+           </ul>
+        </div>
+    </div>
+</section>
